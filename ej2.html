@@ -1,0 +1,42 @@
+<!-- ojo.addEventListener("click",function(){
+    cuerpo.style.backgroundColor = "#7c0000"
+}) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="formulario" style="display:flex;align-items: flex-start;">
+        Comentarios:
+        <textarea name="com" id="uno" cols="30" rows="10"></textarea>
+
+    </form>
+    <p id="dos">Este comentario tiene 0 caracteres.</p>
+    
+    <script>
+        var comentario = document.getElementById("uno");
+        var mensaje = document.getElementById("dos");
+        
+
+        comentario.addEventListener("input", function () {
+            var cantidad = document.formulario.com.value.length
+            mensaje.innerText = "Este comentario tiene " + cantidad + "/10 caracteres."
+            if(cantidad>10){
+                mensaje.style.color = "#ff0000"
+                mensaje.style.fontWeight = 600
+            } else{
+                mensaje.style.color = "#000000"
+                mensaje.style.fontWeight = 400
+            }
+        })
+    </script>
+</body>
+
+</html>

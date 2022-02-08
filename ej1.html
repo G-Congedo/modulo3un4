@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ej1.css">
+</head>
+<body>
+   <div id="rojo">Rojo</div>
+   <div id="verde">Verde</div>
+   <div id="azul">Azul</div>
+
+   <script>
+       var rojo = document.getElementById("rojo");
+       var azul = document.getElementById("azul");
+       var verde = document.getElementById("verde");
+        var cuerpo = document.getElementsByTagName("body")[0];
+
+        rojo.addEventListener("click",function(){
+            cuerpo.style.backgroundColor = "#7c0000"
+        })
+
+        azul.addEventListener("click",function(){
+            cuerpo.style.backgroundColor = "#000080"
+        })
+
+        verde.addEventListener("click",function(){
+            cuerpo.style.backgroundColor = "#004900"
+        })
+
+   </script>
+</body>
+</html>
